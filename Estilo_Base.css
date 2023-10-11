@@ -260,6 +260,7 @@ footer p{
     font-size: 16px;
     color: #000000;
     margin: 16px 0px;
+    text-wrap: nowrap;
 }
 
 #foottit {
