@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vida Sana</title>
+    <!-- El "Estilo_Base.css" es el estilo para el header y el footer -->
+    <link rel="stylesheet" href="./Estilo_Base.css">
+    <!-- Ambos links siguientes son para los iconos y fonts necesarios para el footer -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="icon" href="Imagenes/favicon-16x16.png" type="image/x-icon">
+    <!--  A continuacion pongo el link css propio de esta pagina que trabajamos -->
+    <link rel="stylesheet" href="./index.css">
+
+</head>
+
+<body>
+    <!--     navegador, logo y buscador    -->
+    <header class="header-fondo">
+        <div class="logo-container">
+            <img class="logo" src="Imagenes/LogoVidaSana.png" alt="LogotipoVidaSana">
+        </div>
+        <button id="abrir" class="abrir-menu"> <i class="bi bi-list"></i> </button>
+        <nav class="nav1" id="nav">
+            <button id="cerrar" class="cerrar-menu"> <i class="bi bi-x-lg"></i> </button>
+            <ul class="nav-list">
+                <li> <a href="#recetario" class="enlaces">Recetas</a></li>
+                <li> <a href="./estudios.html" class="enlaces">Estudios</a></li> 
+                <li> <a href="#contactos" class="enlaces">Contactos</a></li>
+                
+                    <div class="buscar">
+                        <input type="text" placeholder="Buscar" required>
+                        <div class="btn">
+                            <i class="fas fa-search icon"></i>
+                        </div>
+                    </div>
+            </ul>
+        </nav>      
+    </header>
+    <script src="index.js"></script>
+
+
+    <main>
+
+        <br><br><br><br>
+
+        <article>
+            <br>
+            <p class="titulo">Bienvenido a VIDA SANA</p>
+            <p class="texto">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus maiores saepe officiis earum neque. Optio quia repellendus dolorem aspernatur aut, ullam quaerat. Quia ipsam et accusamus, possimus sint ut sapiente omnis soluta consequatur fuga deserunt cum nobis laborum suscipit consectetur?</p>
+        </article>
+
+        <br>
+        <br>
+
+        <!--     slide de imagenes      -->
+        <div class="slide_img">
+            <img src="./Imagenes/Comida sana 1.jpg" alt="Comida 1">
+            <img src="./Imagenes/Comida sana 2.jpg" alt="Comida 2">
+            <img src="./Imagenes/Comida sana 3.jpg" alt="Comida 3">
+            <img src="./Imagenes/Comida sana 4.jpg" alt="Comida 4">
+            <img src="./Imagenes/Comida sana 5.jpg" alt="comida 5"> 
+        </div>   
+
+        <br>
+
+        <article>
+            <p class="titulo">Recetas</p>
+            <p class="texto">Recetas varias para comensar en el mundo saludable</p>
+        </article>
+
+        <br>
+        <br>
+
+        <section class="ultimos-platos">
+            <div>
+                <a href="#comida2">
+                    <img src="./Imagenes/Comida sana 2.jpg" alt="comida 2">
+                </a>
+                <p>Un riquisimo pollo vegetariano! Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                
+            </div>
+
+            <div>
+                <a href="#comida4">
+                    <img src="./Imagenes/Comida sana 4.jpg" alt="comida 4">
+                </a>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, eum provident</p>
+            </div>
+
+            <div>
+                <a href="#comida5">
+                    <img src="./Imagenes/Comida sana 5.jpg" alt="comida 5">
+                </a>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia minima vero quae ullam, corrupti ab!</p>
+            </div>
+        </section>
+
+        <br>
+        <hr>
+
+        <div>
+            <p class="titulo">Ciencia y cocina!</p>
+            <p class="texto">Informate sobre los ultimos estudios realizados para una vida mas sana </p>
+        </div>
+
+        <br>
+        <br>
+        
+        <section class="ultimos-estudios">
+
+            <div>
+                <a href="#estudio1">
+                    <img src="./Imagenes/Estudio 1.jpg" alt="Estudio 1">
+                </a>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus explicabo assumenda maiores eligendi consectetur non!</p>
+            </div>
+
+            <div>
+                <a href="estudio2">
+                    <img src="./Imagenes/Estudio 2.jpg" alt="Estudio 2">
+                </a>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ipsum aliquam voluptate perferendis provident</p>
+            </div>
+            
+        </section>
+    </main>
+
+
+        <!--           footer           -->
+    <footer>
+        <div class="redes">
+            <ul>
+                <li><a href="https://www.facebook.com/"><img src="Imagenes/facebook.png" alt="face"></a><a
+                        class="linkred" href="https://www.facebook.com/">Facebook</a></li>
+                <br>
+                <li><a href="https://www.instagram.com/"><img src="Imagenes/insta.png" alt="insta"></a><a
+                        class="linkred" href="https://www.instagram.com/">Instagram</a></li>
+            </ul>
+        </div>
+        <div class="info">
+            <ul>
+                <li id="foottit">INFORMACION</li>
+                <br>
+                <li><a class="linksfooter" href="">Contacto</a></li>
+                <br>
+                <li><a class="linksfooter" href="">Quienes somos?</a></li>
+                <br>
+                <li><a class="linksfooter" href="">Terminos de uso</a></li>
+            </ul>
+        </div>
+        <div class="cuenta">
+            <ul>
+                <li id="foottit">CUENTA</li>
+                <br>
+                <li><a class="linksfooter" href="">Iniciar sesion</a></li>
+                <br>
+                <li><a class="linksfooter" href="">Registrarse</a></li>
+
+            </ul>
+        </div>
+
+        <div class="inicio"><a href="#" class="material-symbols-outlined">expand_less</a></div>
+
+        <div class="copyright">
+            <img class="logofoot" src="Imagenes/logocopy.png" alt="logo">
+            <p>© 2023 VidaSana S.A.</p>
+        </div>
+
+    </footer>
+    
+    
+
+    
+</body>
+</html>

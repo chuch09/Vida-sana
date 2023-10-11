@@ -1,0 +1,98 @@
+
+
+
+
+
+/*-----------------------------------------------------*/
+/* GRID AREAS
+/*-----------------------------------------------------*/
+.encabezado {
+    grid-area: cabecera;
+}
+.menu {
+    grid-area: barra;
+}
+.izquierda {
+    grid-area: izquierda;
+    background-color: chocolate;
+    padding: 10px;
+}
+
+.derecha {
+    grid-area:derecha;
+    padding: 10px;
+    background-color: bisque;
+}
+
+.centro {
+    grid-area: foto;
+}
+
+.footer {
+    grid-area: pie;
+}
+
+
+/*-----------------------------------------------------*/
+/* Estilos de la grilla para pantallas grandes
+/*-----------------------------------------------------*/
+h1 {
+    font-size: 48px;
+}
+.contenedor-grid {
+    display: grid;
+    gap: 4px;
+    grid-template: auto auto auto auto auto/ auto auto auto auto auto ;
+    grid-template-areas: "cabecera cabecera cabecera"
+                         "barra barra barra"
+                         "izquierda foto derecha"
+                         "pie pie pie";
+
+}
+/*-----------------------------------------------------*/
+/* Estilos de la grilla para pantallas de tablet
+/*-----------------------------------------------------*/
+@media (max-width: 1280px) {
+    .contenedor-grid {
+        display: grid;
+        grid-template: auto auto auto auto auto/ 50% 50% ;
+        grid-template-areas: "cabecera cabecera"
+                             "barra barra"
+                             "izquierda derecha"
+                             " foto foto "
+                             "pie pie";
+    
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+}
+
+/*-----------------------------------------------------*/
+/* Estilos de la grilla para pantallas de moviles
+/*-----------------------------------------------------*/
+@media (max-width: 720px) {
+    .contenedor-grid {
+        display: grid;
+        grid-template: auto auto auto auto auto auto/ auto ;
+        grid-template-areas: "cabecera"
+                             "barra"
+                             "izquierda"
+                             " foto  "
+                             "derecha"
+                             "pie";
+    
+    }
+    h1 {
+        font-size: 30px;
+    }
+    nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: darkgreen;
+        padding: 10px;
+        text-align: center;
+    }
+}

@@ -1,0 +1,108 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+/* Slide de imagenes --------------------- */
+
+.slide_img{
+    padding-top: 40px;
+    margin: 0 auto;
+    display: flex;
+    width: 85%;
+    height: 450px;
+    }
+.slide_img img{
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+    }
+.slide_img img:hover{
+    width: 400px;
+    opacity: 1;
+    filter: contrast(110%);
+    }
+
+/* edicion de article ------------------------------------------ */
+
+.titulo{
+    color: rgb(16, 16, 71);
+    font-family: 'Merriweather', serif;
+    font-size: 40px;
+    
+}
+
+.texto{
+    color: rgb(16, 16, 71);
+    font-family: 'Barlow', sans-serif;
+    font-size: 25px;
+}
+
+/* ultimos-platos ----------------------------------------------- */
+
+.ultimos-platos{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    margin: 40px;
+}
+.ultimos-platos div{
+    width: 24%;
+    background-color: rgb(209, 204, 204);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.ultimos-platos div p{
+    color: rgb(16, 16, 71);
+    font-family: 'Barlow', sans-serif;
+    font-size: 25px;
+}
+
+.ultimos-platos div img{
+    width: 100%;
+    max-height: 200px;
+}
+
+.ultimos-platos div img:hover{
+    animation: 0.6s forwards ampliacion;
+}
+
+@keyframes ampliacion{
+    0% {transform: scale(1);}
+    50% {transform: scale(1.05);}
+    100% {transform: scale(1);}
+}
+
+/* ultimmos-estudios -------------------------------------------- */
+
+.ultimos-estudios{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    margin: 40px;
+}
+
+.ultimos-estudios div{
+    width: 24%;
+    background-color: rgb(209, 204, 204);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.ultimos-estudios div p{
+    color: rgb(16, 16, 71);
+    font-family: 'Barlow', sans-serif;
+    font-size: 25px;
+}
+
+.ultimos-estudios div img{
+    width: 100%;
+    max-height: 200px;
+}
+
+.ultimos-estudios div img:hover{
+    animation: 0.6s forwards ampliacion;
+}
