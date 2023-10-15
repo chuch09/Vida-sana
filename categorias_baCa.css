@@ -16,23 +16,23 @@ main{
     /* grid del navegador ---------------- */
     grid-area: navegador;
     /* ----------------------------------- */
-    margin-top: 50px;
-    display: flex;
-    flex-direction: column;
-    padding: 50px;
-    width: 400px;
-    
+    text-align: center;
+    background-color: #ccefcb;
+}
+
+.nav-rec ul{
+    list-style: none;
 }
 
 .nav-rec ul li{
-    list-style: none;
-    border: solid rgb(187, 187, 187) 1px;
-    padding: 15px;
-    border-radius: 5px;
+    display: inline-block;
+    padding: 20px;
 }
 
 .nav-rec ul li:hover{
-    background: radial-gradient(ellipse at right, rgb(155, 0, 158), transparent);
+    background: radial-gradient(ellipse at right, transparent);
+    animation: 0.5s infinite boton-menu;
+    border: solid white 1px;
 }
 
 .nav-rec a{
@@ -40,6 +40,13 @@ main{
     color: black;
     font-family: Arial, Helvetica, sans-serif;
     font-size: large;
+    font-weight: bolder;
+}
+
+@keyframes boton-menu {
+    0% { transform: scaleX(1);}
+    50% { transform: scaleX(1.15);}
+    100% { transform: scaleX(1);}
 }
 
 /* seccion platos ------------------------ */
