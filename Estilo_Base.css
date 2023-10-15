@@ -7,6 +7,7 @@
 
 /* Estilo del header --------------------- */
 header {
+    grid-area: cabeza;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -22,7 +23,7 @@ header {
 }
 
 .header-fondo{
-    background-image: linear-gradient(rgba(42, 163, 24, 0.83), rgba(30, 30, 1, 0.5)), url(./Imagenes/header-fondo.webp);
+    background-image: linear-gradient(rgba(26, 100, 15, 0.8), rgba(204, 239, 203, 0.2)), url(./Imagenes/header-fondo.webp);
     backdrop-filter: sepia(50%);
     padding: 200px;
     grid-area: cabeza;
@@ -157,6 +158,7 @@ header {
 
 /* Estilo del footer ------------------------------ */
 footer {
+    grid-area: pie;
     background-color: #ccefcb;
     box-shadow: 1px -1px 5px 1px rgba(0, 0, 0, 0.281);
     padding: 30px 90px 15px;

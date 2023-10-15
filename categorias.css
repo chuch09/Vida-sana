@@ -1,3 +1,4 @@
+/* Grid -----------------------------------*/
 body{
     padding: 0;
     margin: 0;
@@ -12,18 +13,22 @@ main{
 /* navegador lateral --------------------- */
 
 .nav-rec{
+    /* grid del navegador ---------------- */
+    grid-area: navegador;
+    /* ----------------------------------- */
     margin-top: 50px;
     display: flex;
     flex-direction: column;
     padding: 50px;
     width: 400px;
+    
 }
 
 .nav-rec ul li{
     list-style: none;
-    border: solid black 1px;
+    border: solid rgb(187, 187, 187) 1px;
     padding: 15px;
-    background: radial-gradient(ellipse at right, rgb(187, 187, 187), transparent);
+    border-radius: 5px;
 }
 
 .nav-rec ul li:hover{
@@ -33,9 +38,20 @@ main{
 .nav-rec a{
     text-decoration: none;
     color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
 }
 
 /* seccion platos ------------------------ */
+
+section{
+    /* Grid de la seccion ---------------- */
+    grid-area: seccion;
+    /* ----------------------------------- */
+    border: solid rgb(187, 187, 187) 1px;
+    border-radius: 10px;
+    margin: 50px;
+}
 
 .box-seccion{
     display: grid;
@@ -101,7 +117,16 @@ main{
 
 /* titulo ---------------------------------*/
 
+.titulo{
+    /* Grid del titulo ------------------- */
+    grid-area: titulo;
+    /* ----------------------------------- */
+}
+
 .titulo h2{
     text-align: center;
-    padding-top: 40px;
+    margin: 50px;
+    font-family: 'Merriweather', serif;
 }
+
+
