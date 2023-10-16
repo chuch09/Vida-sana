@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vida Sana</title>
+    <!-- El "Estilo_Base.css" es el estilo para el header y el footer -->
+    <link rel="stylesheet" href="./Estilo_Base.css">
+    <!-- Ambos links siguientes son para los iconos y fonts necesarios para el footer -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="icon" href="Imagenes/favicon-16x16.png" type="image/x-icon">
+    <!--  A continuacion pongo el link css propio de esta pagina que trabajamos -->
+    <link rel="stylesheet" href="./estilos_contacto.css">
+	  <script src="js/contacto.js"></script>
+   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+  <div class="contenedor">
+    <!--     navegador, logo y buscador    -->
+    <header class="header-fondo">
+      <div class="logo-container">
+          <img class="logo" src="Imagenes/LogoVidaSana.png" alt="LogotipoVidaSana">
+      </div>
+      <button id="abrir" class="abrir-menu"> <i class="bi bi-list"></i> </button>
+      <nav class="nav1" id="nav">
+          <button id="cerrar" class="cerrar-menu"> <i class="bi bi-x-lg"></i> </button>
+          <ul class="nav-list">
+              <li> <a href="#recetario" class="enlaces">Recetas</a></li>
+              <li> <a href="./estudios.html" class="enlaces">Estudios</a></li> 
+              <li> <a href="#contactos" class="enlaces">Contactos</a></li>
+              
+                  <div class="buscar">
+                      <input type="text" placeholder="Buscar" required>
+                      <div class="btn">
+                          <i class="fas fa-search icon"></i>
+                      </div>
+                  </div>
+          </ul>
+      </nav>      
+    </header>
+    <script src="./javaScript/index.js"></script>
+
+      <!-- Contenido de Contactos -->
+    <div class="articulo1">
+              <div class="form-container">
+        <h3>Formulario de Contacto</h3>
+          <form id="contactForm" name="contactForm" onsubmit="return validateForm()" action="https://formspree.io/f/mjvqjgyr"
+method="POST">
+                          <label for="name">Nombre: </label>
+                          <input type="text" name="name" placeholder="Tu nombre" required>
+                          <label for="email">Correo electrónico: </label>
+                          <input type="email" name="email" placeholder="Tu correo electrónico" required>
+                          <label for="phone">Teléfono: </label>
+                          <input type="tel" name="phone" pattern="[0-9]{10}" placeholder="Tu número de teléfono" required>
+                          <label for="message">Mensaje:</label>
+                          <textarea name="message" placeholder="Tu mensaje" required></textarea>
+                          
+                          <button type="submit">Enviar</button>
+                    </form>
+                    <div id="statusMessage"></div>
+              </div>
+        </div>
+          
+    <div class="articulo2">
+      <br>
+      <br>
+      <div class="video-slider">
+        <!-- SLIDE 1 -->
+        <div class="video-slide">
+        <iframe class="video" src="https://www.youtube.com/embed/P-ynO3HU5C8?autoplay=1&enablejsapi=1"></iframe>					  
+        </div>
+        <!-- SLIDE 2 -->
+        <div class="video-slide">
+        <iframe class="video" src="https://www.youtube.com/embed/IIun3wUUJNc?autoplay=1&enablejsapi=1"></iframe>
+        </div>
+        <!-- SLIDE 23 -->
+        <div class="video-slide">
+        <iframe class="video" src="https://www.youtube.com/embed/YzM5ASZfvHs?autoplay=1&enablejsapi=1"></iframe>
+        </div>
+        <!-- Fin de SLIDES -->
+      </div>
+      <div class="video-arrow-left"></div>
+      <div class="video-arrow-right"></div>
+        </div>
+
+    <!--           footer           -->
+    <footer>
+      <div class="redes">
+          <ul>
+              <li><a href="https://www.facebook.com/"><img src="Imagenes/facebook.png" alt="face"></a><a
+                      class="linkred" href="https://www.facebook.com/">Facebook</a></li>
+              <br>
+              <li><a href="https://www.instagram.com/"><img src="Imagenes/insta.png" alt="insta"></a><a
+                      class="linkred" href="https://www.instagram.com/">Instagram</a></li>
+          </ul>
+      </div>
+      <div class="info">
+          <ul>
+              <li id="foottit">INFORMACION</li>
+              <br>
+              <li><a class="linksfooter" href="">Contacto</a></li>
+              <br>
+              <li><a class="linksfooter" href="">Quienes somos?</a></li>
+              <br>
+              <li><a class="linksfooter" href="">Terminos de uso</a></li>
+          </ul>
+      </div>
+      <div class="cuenta">
+          <ul>
+              <li id="foottit">CUENTA</li>
+              <br>
+              <li><a class="linksfooter" href="">Iniciar sesion</a></li>
+              <br>
+              <li><a class="linksfooter" href="">Registrarse</a></li>
+
+          </ul>
+      </div>
+
+      <div class="inicio"><a href="#" class="material-symbols-outlined">expand_less</a></div>
+
+      <div class="copyright">
+          <img class="logofoot" src="Imagenes/logocopy.png" alt="logo">
+          <p>© 2023 VidaSana S.A.</p>
+      </div>
+
+    </footer>
+  </div>
+
+    <script>
+	  // Formulario de Contacto
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        submitForm();
+      });
+	</script>
+    
+	<script src="https://www.youtube.com/iframe_api"></script>
+	
+    <script>
+		// Slider de Videos de Youtube
+		  $(document).ready(function () {
+		  var pos = 0,
+			  slides = $('.video-slide'),
+			  numOfSlides = slides.length;
+
+		  function nextSlide() {
+			slides.eq(pos)[0].video.stopVideo();
+			slides.eq(pos).hide();
+			pos = (pos >= numOfSlides - 1 ? 0 : ++pos);
+			slides.eq(pos).show();
+			slides.eq(pos)[0].video.playVideo();
+		  }
+
+		  function previousSlide() {
+			slides.eq(pos)[0].video.stopVideo();
+			slides.eq(pos).hide();
+			pos = (pos == 0 ? numOfSlides - 1 : --pos);
+			slides.eq(pos).show();
+			slides.eq(pos)[0].video.playVideo();
+		  }
+
+		  $('.video-arrow-right').click(nextSlide);
+		  $('.video-arrow-left').click(previousSlide);
+		})
+
+		function onYouTubeIframeAPIReady() {
+		  $('.video-slide').each(function (index, slide) {
+			var iframe = $(slide).find('.video')[0]
+			slide.video = new YT.Player(iframe)
+		  })
+		}
+
+		function handleError() {
+  				alert("Error al cargar la API de YouTube");
+		}
+	</script>
+    
+</body>
+</html>

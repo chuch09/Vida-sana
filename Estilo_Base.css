@@ -7,7 +7,7 @@
 
 /* Estilo del header --------------------- */
 header {
-    grid-area: cabeza;
+    grid-area: encabezado;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -26,7 +26,7 @@ header {
     background-image: linear-gradient(rgba(26, 100, 15, 0.8), rgba(204, 239, 203, 0.2)), url(./Imagenes/header-fondo.webp);
     backdrop-filter: sepia(50%);
     padding: 200px;
-    grid-area: cabeza;
+    grid-area: encabezado;
 }
 
 /* Estilos del elemento .slide_img */

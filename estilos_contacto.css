@@ -140,3 +140,82 @@
 	right: 10px;
 }
 
+
+
+
+
+
+
+
+/*------------------------------------------------------*/
+/* Otros
+/*------------------------------------------------------*/
+.articulo1 {
+  grid-area: articulo1;
+}
+
+.articulo2 {
+  grid-area: articulo2;
+}
+
+/*------------------------------------------------------*/
+/* Estilos del contenedor grid para pantallas xs
+/*------------------------------------------------------*/
+.contenedor {
+  display: grid;
+  grid-template: repeat(4, auto) / 100% ;
+  grid-template-areas: "encabezado"
+                        "articulo1"
+                        "articulo2"
+                        "pie";
+}
+
+/*------------------------------------------------------*/
+/* Estilos del contenedor grid para pantallas small
+/*------------------------------------------------------*/
+@media (min-width: 720px) {
+  .contenedor {
+      display: grid;
+      grid-template: repeat(4, auto) / 50% 50% ;
+      grid-template-areas: "encabezado encabezado"
+                            "articulo1 articulo2"
+                            "articulo1 articulo2"
+                            "pie pie" ;
+  }
+
+  .contenedor-rece {
+      height: 400px;
+      overflow: hidden;
+  }    
+
+  .contenedor-rece div p {
+      font-size: 2.0vw;
+  }
+
+  .encabezado-centro h1 {
+      font-size: 36px;
+  }
+}
+
+/*------------------------------------------------------*/
+/* Estilos del contenedor grid para pantallas medias
+/*------------------------------------------------------*/
+@media (min-width: 920px) {
+  
+  .contenedor-rece {
+      height: 400px;
+      overflow: hidden;
+  }    
+
+  .contenedor-rece div p {
+      font-size: 1.6vw;
+  }
+  
+  .contenedor-rece img {
+      height: 350px;
+  }
+
+  .encabezado-centro h1 {
+      font-size: 48px;
+  }
+}
