@@ -28,16 +28,13 @@ body{
 /* edicion de article ------------------------------------------ */
 
 .titulo{
-    color: rgb(16, 16, 71);
-    font-family: 'Merriweather', serif;
     font-size: 40px;
-    
+    font-weight: bold
 }
 
 .texto{
-    color: rgb(16, 16, 71);
-    font-family: 'Barlow', sans-serif;
-    font-size: 25px;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 /* ultimos-platos ----------------------------------------------- */
@@ -56,8 +53,6 @@ body{
 }
 
 .ultimos-platos div p{
-    color: rgb(16, 16, 71);
-    font-family: 'Barlow', sans-serif;
     font-size: 25px;
 }
 
@@ -93,8 +88,6 @@ body{
 }
 
 .ultimos-estudios div p{
-    color: rgb(16, 16, 71);
-    font-family: 'Barlow', sans-serif;
     font-size: 25px;
 }
 
