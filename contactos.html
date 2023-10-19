@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vida Sana</title>
+    
+    <link rel="stylesheet" href="./css/estilos_index.css">
+    <link rel="stylesheet" href="./css/estilos_contacto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+	  <script src="js/contacto.js"></script>
+   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <!-- Contenedor principal -->
+    <div class="contenedor">
+        
+        <!-- Encabezado -->
+        <header class="encabezado">
+            <div class="encabezado-izq">
+                    <img src="Imagenes/logovs.png" alt="Vida Sana">
+            </div>
+            <div class="encabezado-centro">
+                    <h1>&nbsp;&nbsp;</h1>
+            </div> 
+            <div class="encabezado-der">
+                    &nbsp;
+            </div>
+        </header>
+
+        <!-- Barra de Navegación -->
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="recetas.html">RECETAS</a></li>
+                <li><a href="estudios.html">ESTUDIOS</a></li>
+                <li><a href="contactos.html">CONTACTOS</a></li>
+            </ul>
+        </nav>
+
+        <!-- Contenido de Contactos -->
+			<div class="articulo1">
+                <div class="form-container">
+					<h3>Formulario de Contacto</h3>
+					  <form id="contactForm" name="contactForm" onsubmit="return validateForm()" action="https://formspree.io/f/mjvqjgyr"
+  method="POST">
+                            <label for="name">Nombre: </label>
+                            <input type="text" name="name" placeholder="Tu nombre" required>
+                            <label for="email">Correo electrónico: </label>
+                            <input type="email" name="email" placeholder="Tu correo electrónico" required>
+                            <label for="phone">Teléfono: </label>
+                            <input type="tel" name="phone" pattern="[0-9]{10}" placeholder="Tu número de teléfono" required>
+                            <label for="message">Mensaje:</label>
+                            <textarea name="message" placeholder="Tu mensaje" required></textarea>
+                            
+                            <button type="submit">Enviar</button>
+                      </form>
+                      <div id="statusMessage"></div>
+                </div>
+        	</div>
+            
+			<div class="articulo2">
+				<br>
+				<br>
+				<div class="video-slider">
+				  <!-- SLIDE 1 -->
+				  <div class="video-slide">
+					<iframe class="video" src="https://www.youtube.com/embed/P-ynO3HU5C8?autoplay=1&enablejsapi=1"></iframe>					  
+				  </div>
+				  <!-- SLIDE 2 -->
+				  <div class="video-slide">
+					<iframe class="video" src="https://www.youtube.com/embed/IIun3wUUJNc?autoplay=1&enablejsapi=1"></iframe>
+				  </div>
+					<!-- SLIDE 23 -->
+				  <div class="video-slide">
+					<iframe class="video" src="https://www.youtube.com/embed/YzM5ASZfvHs?autoplay=1&enablejsapi=1"></iframe>
+				  </div>
+				  <!-- Fin de SLIDES -->
+				</div>
+				<div class="video-arrow-left"></div>
+				<div class="video-arrow-right"></div>
+        	</div>
+			       
+   
+        <!-- Pie de página -->
+        <footer class="pie">
+            <div>
+                <p>&copy; 2023 - Vida Sana</p>
+            </div>
+            <div class="iconos">
+               <a href="#"><span class="fab fa-facebook"  title="Ir a Facebook"></span></a>
+               <a href="#"><span class="fab fa-instagram" title="Ir a Instagram"></span></a>
+               <a href="#"><span class="fab fa-twitter"   title="Ir a Twitter"></span></a>
+               <a href="#"><span class="fas fa-envelope"  title="Enviar correo"></span></a>
+            </div>
+
+        </footer>
+        
+
+    </div>
+
+    <script>
+	  // Formulario de Contacto
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        submitForm();
+      });
+	</script>
+    
+	<script src="https://www.youtube.com/iframe_api"></script>
+	
+    <script>
+		// Slider de Videos de Youtube
+		  $(document).ready(function () {
+		  var pos = 0,
+			  slides = $('.video-slide'),
+			  numOfSlides = slides.length;
+
+		  function nextSlide() {
+			slides.eq(pos)[0].video.stopVideo();
+			slides.eq(pos).hide();
+			pos = (pos >= numOfSlides - 1 ? 0 : ++pos);
+			slides.eq(pos).show();
+			slides.eq(pos)[0].video.playVideo();
+		  }
+
+		  function previousSlide() {
+			slides.eq(pos)[0].video.stopVideo();
+			slides.eq(pos).hide();
+			pos = (pos == 0 ? numOfSlides - 1 : --pos);
+			slides.eq(pos).show();
+			slides.eq(pos)[0].video.playVideo();
+		  }
+
+		  $('.video-arrow-right').click(nextSlide);
+		  $('.video-arrow-left').click(previousSlide);
+		})
+
+		function onYouTubeIframeAPIReady() {
+		  $('.video-slide').each(function (index, slide) {
+			var iframe = $(slide).find('.video')[0]
+			slide.video = new YT.Player(iframe)
+		  })
+		}
+
+		function handleError() {
+  				alert("Error al cargar la API de YouTube");
+		}
+	</script>
+    
+</body>
+</html>

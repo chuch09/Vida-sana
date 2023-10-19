@@ -1,0 +1,18 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+/* imagen ------------------------ */
+.img_comida{
+    padding: 50px;
+}
+.img_comida img{
+    width: 600px;
+}
+
+/* texto ------------------------- */
+
+main{
+    margin: 50px;
+}
