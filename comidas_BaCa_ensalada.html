@@ -9,34 +9,33 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet">
     <!-- El "Estilo_Base.css" es el estilo para el header y el footer -->
-    <link rel="stylesheet" href="./Estilo_Base.css">
+    <link rel="stylesheet" href="./css/Estilo_Base.css">
     <!-- Ambos links siguientes son para los iconos y fonts necesarios para el footer -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="icon" href="Imagenes/favicon-16x16.png" type="image/x-icon">
     <!--  A continuacion pongo el link css propio de esta pagina que trabajamos -->
-    <link rel="stylesheet" href="./comidas.css">
+    <link rel="stylesheet" href="./css/comidas.css">
 </head>
 
 <body>
     <!--     navegador, logo y buscador    -->
-    <header class="header-fondo">
+    <header>
         <div class="logo-container">
-            <img class="logo" src="Imagenes/LogoVidaSana.png" alt="LogotipoVidaSana">
+            <a href="index.html">
+            <img class="logo" src="Imagenes/LogoVidaSana-fondo.png" alt="LogotipoVidaSana">
+            </a>
         </div>
         <button id="abrir" class="abrir-menu"> <i class="bi bi-list"></i> </button>
         <nav class="nav1" id="nav">
             <button id="cerrar" class="cerrar-menu"> <i class="bi bi-x-lg"></i> </button>
             <ul class="nav-list">
-                <li> <a href="#recetario" class="enlaces">Recetas</a></li>
+                <li><a href="./index.html" class="enlaces">Inicio</a></li>
+                <li> <a href="./recetas.html" class="enlaces">Recetas</a></li>
                 <li> <a href="./estudios.html" class="enlaces">Estudios</a></li> 
-                <li> <a href="#contactos" class="enlaces">Contactos</a></li>
-                
-                    <div class="buscar">
+                <li> <a href="./contactos.html" class="enlaces">Contactos</a></li>
+                    <li class="buscar">
                         <input type="text" placeholder="Buscar" required>
-                        <div class="btn">
-                            <i class="fas fa-search icon"></i>
-                        </div>
-                    </div>
+                    </li>
             </ul>
         </nav>      
     </header>
