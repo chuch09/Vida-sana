@@ -10,13 +10,17 @@
     justify-content: center;
 }
 
+.rece_container a{
+    text-decoration: none;
+}
+
 .rece_container:hover{
     .rece_portada img{filter: brightness(20%);}
     .rece_portada{background-color: rgb(0, 0, 0); color: black;}
 }
 
 .rece_container .rece_portada {
-    width: 200px;
+    width: 360px;
     margin: 15px;
     overflow: hidden;
     position: relative;

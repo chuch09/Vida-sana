@@ -3,7 +3,7 @@
 
 
 
-.articulo1, .articulo2 {
+.articulo1 {
   flex: 1;
   margin: 5px 10px 5px 5px;
   padding: 5px;
@@ -147,33 +147,33 @@
 
 
 
-/*------------------------------------------------------*/
+/* ------------------------------------------------------ */
 /* Otros
 /*------------------------------------------------------*/
-.articulo1 {
+/* .articulo1 {
   grid-area: articulo1;
 }
 
 .articulo2 {
   grid-area: articulo2;
-}
+} */
 
 /*------------------------------------------------------*/
 /* Estilos del contenedor grid para pantallas xs
 /*------------------------------------------------------*/
-.contenedor {
+/* .contenedor {
   display: grid;
   grid-template: repeat(4, auto) / 100% ;
   grid-template-areas: "encabezado"
                         "articulo1"
                         "articulo2"
                         "pie";
-}
+} */
 
 /*------------------------------------------------------*/
 /* Estilos del contenedor grid para pantallas small
 /*------------------------------------------------------*/
-@media (min-width: 720px) {
+/* @media (min-width: 720px) {
   .contenedor {
       display: grid;
       grid-template: repeat(4, auto) / 50% 50% ;
@@ -195,12 +195,12 @@
   .encabezado-centro h1 {
       font-size: 36px;
   }
-}
+} */
 
 /*------------------------------------------------------*/
 /* Estilos del contenedor grid para pantallas medias
 /*------------------------------------------------------*/
-@media (min-width: 920px) {
+/* @media (min-width: 920px) {
   
   .contenedor-rece {
       height: 400px;
@@ -218,4 +218,4 @@
   .encabezado-centro h1 {
       font-size: 48px;
   }
-}
+} */

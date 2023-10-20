@@ -9,12 +9,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet">
     <!-- El "Estilo_Base.css" es el estilo para el header y el footer -->
-    <link rel="stylesheet" href="./Estilo_Base.css">
+    <link rel="stylesheet" href="./css/Estilo_Base.css">
     <!-- Ambos links siguientes son para los iconos y fonts necesarios para el footer -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="icon" href="Imagenes/favicon-16x16.png" type="image/x-icon">
     <!--  A continuacion pongo el link css propio de esta pagina que trabajamos -->
-    <link rel="stylesheet" href="./estilos_recetas.css">
+    <link rel="stylesheet" href="./css/estilos_recetas.css">
 
 		
 </head>
@@ -22,128 +22,141 @@
 <body>
 		
     <!--     navegador, logo y buscador    -->
-    <header class="header-fondo">
+    <header>
         <div class="logo-container">
-            <img class="logo" src="Imagenes/LogoVidaSana.png" alt="LogotipoVidaSana">
+            <a href="index.html">
+            <img class="logo" src="Imagenes/LogoVidaSana-fondo.png" alt="LogotipoVidaSana">
+            </a>
         </div>
         <button id="abrir" class="abrir-menu"> <i class="bi bi-list"></i> </button>
         <nav class="nav1" id="nav">
             <button id="cerrar" class="cerrar-menu"> <i class="bi bi-x-lg"></i> </button>
             <ul class="nav-list">
-                <li> <a href="#recetario" class="enlaces">Recetas</a></li>
+                <li><a href="./index.html" class="enlaces">Inicio</a></li>
+                <li> <a href="./recetas.html" class="enlaces">Recetas</a></li>
                 <li> <a href="./estudios.html" class="enlaces">Estudios</a></li> 
-                <li> <a href="#contactos" class="enlaces">Contactos</a></li>
-                
-                    <div class="buscar">
+                <li> <a href="./contactos.html" class="enlaces">Contactos</a></li>
+                    <li class="buscar">
                         <input type="text" placeholder="Buscar" required>
-                        <div class="btn">
-                            <i class="fas fa-search icon"></i>
-                        </div>
-                    </div>
+                    </li>
             </ul>
         </nav>      
     </header>
-    <script src="index.js"></script>
+    <script src="./javaScript/index.js"></script>
 
     <main>
         <div class="contenedor-grid">
 
         <div class="rece_container">
-            <div class="rece_portada">
-                <img src="./Imagenes/recetas/veg001.jpg" alt="Vegetarianas">
-                <h3 class="rece_detalles">
-                    VEGETARIANAS
-                </h3>
-                <div class="rece_resumen">
-                    <h3>Recetas Vegetarianas</h3>
-                    <p>Si eres vegetariano, en esta sección de VIDA SANA encontrarás una amplia selección de nuestras mejores recetas vegetarianas que seguro que alguna vez has probado. Ahora, puedes hacerlo en casa de una forma sencilla y rápida, pero como siempre, muy saludable. Puedes encontrar desde deliciosos entrantes, como platos principales muy completos para que elabores tus menús diarios en muy poco tiempo.
-                    </p>
+            <a href="./categoria_veget.html">
+                <div class="rece_portada">
+                    <img src="./Imagenes/recetas/veg001.jpg" alt="Vegetarianas">
+                    <h3 class="rece_detalles">
+                        VEGETARIANAS
+                    </h3>
+                    <div class="rece_resumen">
+                        <h3>Recetas Vegetarianas</h3>
+                        <p>Si eres vegetariano, en esta sección de VIDA SANA encontrarás una amplia selección de nuestras mejores recetas vegetarianas que seguro que alguna vez has probado. Ahora, puedes hacerlo en casa de una forma sencilla y rápida, pero como siempre, muy saludable. Puedes encontrar desde deliciosos entrantes, como platos principales muy completos para que elabores tus menús diarios en muy poco tiempo.
+                        </p>
+                    </div>
                 </div>
-            </div>
+            </a>
         </div>
 
         <div class="rece_container">
-            <div class="rece_portada">
-                <img src="./Imagenes/recetas/vea001.jpg" alt="Veganas">
-                <h3 class="rece_detalles">
-                    VEGANAS
-                </h3>
-                <div class="rece_resumen">
-                    <h3>Recetas Veganas</h3>
-                    <p>Si eres vegano, en esta sección de VIDA SANA encontrarás una amplia selección de nuestras mejores recetas veganas que seguro que alguna vez has probado. Ahora, puedes hacerlo en casa de una forma sencilla y rápida, pero como siempre, muy saludable. Puedes encontrar desde deliciosos entrantes, como platos principales muy completos para que elabores tus menús diarios en muy poco tiempo.
-                     </p>
+            <a href="./categoria_vegan.html">
+                <div class="rece_portada">
+                    <img src="./Imagenes/recetas/vea001.jpg" alt="Veganas">
+                    <h3 class="rece_detalles">
+                        VEGANAS
+                    </h3>
+                    <div class="rece_resumen">
+                        <h3>Recetas Veganas</h3>
+                        <p>Si eres vegano, en esta sección de VIDA SANA encontrarás una amplia selección de nuestras mejores recetas veganas que seguro que alguna vez has probado. Ahora, puedes hacerlo en casa de una forma sencilla y rápida, pero como siempre, muy saludable. Puedes encontrar desde deliciosos entrantes, como platos principales muy completos para que elabores tus menús diarios en muy poco tiempo.
+                        </p>
+                    </div>
                 </div>
-            </div>
+            </a>
         </div>
 
         <div class="rece_container">
-            <div class="rece_portada">
-                <img src="./Imagenes/recetas/bca001.jpg" alt="Bajas Calorias">
-                <h3 class="rece_detalles">
-                    BAJAS CALORIAS
-                </h3>
-                <div class="rece_resumen">
-                    <h3>Recetas Bajas Calorias</h3>
-                    <p>Si buscas recetas Bajas en Calorias, en esta sección de VIDA SANA encontrarás una amplia selección de nuestras mejores recetas bajas en calorias que seguro que alguna vez has probado. Ahora, puedes hacerlo en casa de una forma sencilla y rápida, pero como siempre, muy saludable. Puedes encontrar desde deliciosos entrantes, como platos principales muy completos para que elabores tus menús diarios en muy poco tiempo.
-                     </p>
+            <a href="./categoria_baCa.html">
+                <div class="rece_portada">
+                    <img src="./Imagenes/recetas/bca001.jpg" alt="Bajas Calorias">
+                    <h3 class="rece_detalles">
+                        BAJAS CALORIAS
+                    </h3>
+                    <div class="rece_resumen">
+                        <h3>Recetas Bajas Calorias</h3>
+                        <p>Si buscas recetas Bajas en Calorias, en esta sección de VIDA SANA encontrarás una amplia selección de nuestras mejores recetas bajas en calorias que seguro que alguna vez has probado. Ahora, puedes hacerlo en casa de una forma sencilla y rápida, pero como siempre, muy saludable. Puedes encontrar desde deliciosos entrantes, como platos principales muy completos para que elabores tus menús diarios en muy poco tiempo.
+                        </p>
+                    </div>
                 </div>
-            </div>
+            </a>
         </div>
         
         <div class="rece_container">
-            <div class="rece_portada">
-                <img src="./Imagenes/recetas/sgl001.jpg" alt="Sin Gluten">
-                <h3 class="rece_detalles">
-                    SIN GLUTEN
-                </h3>
-                <div class="rece_resumen">
-                    <h3>Recetas Sin GLUTEN</h3>
-                    <p>Si buscas recetas Sin GLUTEN, en esta sección de VIDA SANA encontrarás una amplia selección de nuestras mejores recetas sin gluten que seguro que alguna vez has probado. Ahora, puedes hacerlo en casa de una forma sencilla y rápida, pero como siempre, muy saludable. Puedes encontrar desde deliciosos entrantes, como platos principales muy completos para que elabores tus menús diarios en muy poco tiempo.
-                     </p>
+            <a href="./categoria_sinGlu.html">
+                <div class="rece_portada">
+                    <img src="./Imagenes/recetas/sgl001.jpg" alt="Sin Gluten">
+                    <h3 class="rece_detalles">
+                        SIN GLUTEN
+                    </h3>
+                    <div class="rece_resumen">
+                        <h3>Recetas Sin GLUTEN</h3>
+                        <p>Si buscas recetas Sin GLUTEN, en esta sección de VIDA SANA encontrarás una amplia selección de nuestras mejores recetas sin gluten que seguro que alguna vez has probado. Ahora, puedes hacerlo en casa de una forma sencilla y rápida, pero como siempre, muy saludable. Puedes encontrar desde deliciosos entrantes, como platos principales muy completos para que elabores tus menús diarios en muy poco tiempo.
+                        </p>
+                    </div>
                 </div>
-            </div>
+            </a>
         </div>
 
         <div class="rece_container">
-            <div class="rece_portada">
-                <img src="./Imagenes/recetas/sla001.jpg" alt="Sin Lactosa">
-                <h3 class="rece_detalles">
-                    SIN LACTOSA
-                </h3>
-                <div class="rece_resumen">
-                    <h3>Recetas Sin LACTOSA</h3>
-                    <p>Si buscas recetas Sin LACTOSA, en esta sección de VIDA SANA encontrarás una amplia selección de nuestras mejores recetas sin lactosa que seguro que alguna vez has probado. Ahora, puedes hacerlo en casa de una forma sencilla y rápida, pero como siempre, muy saludable. Puedes encontrar desde deliciosos entrantes, como platos principales muy completos para que elabores tus menús diarios en muy poco tiempo.
-                     </p>
+            <a href="./categoria_sinLac.html">
+                <div class="rece_portada">
+                    <img src="./Imagenes/recetas/sla001.jpg" alt="Sin Lactosa">
+                    <h3 class="rece_detalles">
+                        SIN LACTOSA
+                    </h3>
+                    <div class="rece_resumen">
+                        <h3>Recetas Sin LACTOSA</h3>
+                        <p>Si buscas recetas Sin LACTOSA, en esta sección de VIDA SANA encontrarás una amplia selección de nuestras mejores recetas sin lactosa que seguro que alguna vez has probado. Ahora, puedes hacerlo en casa de una forma sencilla y rápida, pero como siempre, muy saludable. Puedes encontrar desde deliciosos entrantes, como platos principales muy completos para que elabores tus menús diarios en muy poco tiempo.
+                        </p>
+                    </div>
                 </div>
-            </div>
+            </a>
         </div>
 
         <div class="rece_container">
-            <div class="rece_portada">
-                <img src="./Imagenes/recetas/sfo001.jpg" alt="Slow Food">
-                <h3 class="rece_detalles">
-                    SLOW FOOD
-                </h3>
-                <div class="rece_resumen">
-                    <h3>Recetas SLOW FOOD</h3>
-                    <p>Si buscas recetas SLOW FOOD, en esta sección de VIDA SANA encontrarás una amplia selección de nuestras mejores recetas slow food que seguro que alguna vez has probado. Ahora, puedes hacerlo en casa de una forma sencilla y rápida, pero como siempre, muy saludable. Puedes encontrar desde deliciosos entrantes, como platos principales muy completos para que elabores tus menús diarios en muy poco tiempo.
-                     </p>
+            <a href="./categoria_slow.html">
+                <div class="rece_portada">
+                    <img src="./Imagenes/recetas/sfo001.jpg" alt="Slow Food">
+                    <h3 class="rece_detalles">
+                        SLOW FOOD
+                    </h3>
+                    <div class="rece_resumen">
+                        <h3>Recetas SLOW FOOD</h3>
+                        <p>Si buscas recetas SLOW FOOD, en esta sección de VIDA SANA encontrarás una amplia selección de nuestras mejores recetas slow food que seguro que alguna vez has probado. Ahora, puedes hacerlo en casa de una forma sencilla y rápida, pero como siempre, muy saludable. Puedes encontrar desde deliciosos entrantes, como platos principales muy completos para que elabores tus menús diarios en muy poco tiempo.
+                        </p>
+                    </div>
                 </div>
-            </div>
+            </a>
         </div>
 
         <div class="rece_container">
-            <div class="rece_portada">
-                <img src="./Imagenes/recetas/fit001.jpg" alt="Fitness">
-                <h3 class="rece_detalles">
-                    FITNESS
-                </h3>
-                <div class="rece_resumen">
-                    <h3>Recetas FITNESS</h3>
-                    <p>Si buscas recetas FITNESS, en esta sección de VIDA SANA encontrarás una amplia selección de nuestras mejores recetas Fitness que seguro que alguna vez has probado. Ahora, puedes hacerlo en casa de una forma sencilla y rápida, pero como siempre, muy saludable. Puedes encontrar desde deliciosos entrantes, como platos principales muy completos para que elabores tus menús diarios en muy poco tiempo.
-                     </p>
+            <a href="./categoria_fit.html">
+                <div class="rece_portada">
+                    <img src="./Imagenes/recetas/fit001.jpg" alt="Fitness">
+                    <h3 class="rece_detalles">
+                        FITNESS
+                    </h3>
+                    <div class="rece_resumen">
+                        <h3>Recetas FITNESS</h3>
+                        <p>Si buscas recetas FITNESS, en esta sección de VIDA SANA encontrarás una amplia selección de nuestras mejores recetas Fitness que seguro que alguna vez has probado. Ahora, puedes hacerlo en casa de una forma sencilla y rápida, pero como siempre, muy saludable. Puedes encontrar desde deliciosos entrantes, como platos principales muy completos para que elabores tus menús diarios en muy poco tiempo.
+                        </p>
+                    </div>
                 </div>
-            </div>
+            </a>
         </div>
 
         </div>
@@ -164,7 +177,7 @@
                 <ul>
                     <li id="foottit">INFORMACION</li>
                     <br>
-                    <li><a class="linksfooter" href="">Contacto</a></li>
+                    <li><a class="linksfooter" href="contactos.html">Contacto</a></li>
                     <br>
                     <li><a class="linksfooter" href="">Quienes somos?</a></li>
                     <br>
