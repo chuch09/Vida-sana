@@ -112,7 +112,9 @@ h1 {
     font-size: 48px;
 }
 .contenedor-grid {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     gap: 4px;
     grid-template: auto auto auto auto auto/ auto auto auto auto auto ;
     grid-template-areas: "cabecera cabecera cabecera"

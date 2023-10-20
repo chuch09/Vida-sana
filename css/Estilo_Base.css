@@ -17,6 +17,7 @@ header {
     justify-content: space-between;
     padding: 1rem ;
     background-color: #ccefcb;
+    width: 100%;
 }
 
 /* Estilos del elemento .slide_img */
@@ -46,6 +47,15 @@ header {
     text-decoration:none;
     color: rgb(15, 57, 49);
     font-size: 25px
+}
+.nav-list li{
+    transform: scale(1);
+    transition: 0.5s;
+}
+
+.nav-list li:hover {
+    transform:scale(1.2) ;
+    transition: 0.5s;
 }
 
 .enlaces {
