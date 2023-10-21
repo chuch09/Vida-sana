@@ -1,11 +1,14 @@
 * {
     margin: 0;
     padding: 0%;
-    box-sizing:border-box ;
+    box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-    }
+}
 
-h1,h2,h3,h4{
+h1,
+h2,
+h3,
+h4 {
     font-family: 'Roboto Slab', serif;
 }
 
@@ -15,18 +18,18 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem ;
+    padding: 1rem;
     background-color: #ccefcb;
 }
 
 /* Estilos del elemento .slide_img */
 .slide_img {
     position: relative;
-  }
+}
 
 .logo-container {
-        flex: 1;
-  }
+    flex: 1;
+}
 
 
 .logo {
@@ -37,13 +40,13 @@ header {
     display: flex;
     align-items: center;
     margin-right: 10px;
-    list-style-type:none;
+    list-style-type: none;
     gap: 1rem;
     padding-top: 40px;
 }
 
 .nav-list li a {
-    text-decoration:none;
+    text-decoration: none;
     color: rgb(15, 57, 49);
     font-size: 25px
 }
@@ -51,7 +54,22 @@ header {
 .enlaces {
     margin-right: 20px;
     font-weight: bolder;
-    }
+}
+
+.li-enlaces {
+    transform: scale(1);
+    transition: 0.5s;
+}
+
+.li-enlaces:hover {
+    transform: scale(1.2);
+    transition: 0.3s;
+}
+
+
+.nav-list li .enlaces:hover {
+    transform: scale(1.2);
+}
 
 .buscar {
     display: flex;
@@ -82,49 +100,50 @@ header {
 
 /* Estilos para pantallas más pequeñas */
 @media screen and (max-width: 550px) {
+
     .abrir-menu,
     .cerrar-menu {
-      display: block;
-      border: 0;
-      font-size: 1.25rem;
-      background-color: transparent;
-      cursor: pointer;
+        display: block;
+        border: 0;
+        font-size: 1.25rem;
+        background-color: transparent;
+        cursor: pointer;
     }
 
 
-   .nav1 {
+    .nav1 {
         opacity: 0;
         visibility: hidden;
         display: flex;
         flex-direction: column;
-        align-items:end ;
+        align-items: end;
         gap: 1rem;
         position: absolute;
         top: 0;
         right: 0;
-        background-color:#ccefcb;
+        background-color: #ccefcb;
         padding: 2rem;
         z-index: 1;
-   } 
+    }
 
-   .nav1.visible {
+    .nav1.visible {
         opacity: 1;
         visibility: visible;
-   }
+    }
 
-   .nav-list {
+    .nav-list {
         display: flex;
         flex-grow: 1;
         margin-right: 160px;
         flex-direction: column;
         align-items: end;
-   }
-
-
-   .form-control {
-    width: 200px;
-}
     }
+
+
+    .form-control {
+        width: 200px;
+    }
+}
 
 
 
@@ -183,7 +202,7 @@ footer ul {
 
 footer ul li {
     display: flex;
-    
+
 }
 
 footer ul li img {
@@ -213,6 +232,7 @@ footer ul li img {
     color: #000000;
     font-size: 15px;
     margin-left: 3px;
+    text-wrap: nowrap;
 }
 
 .inicio a {
@@ -229,7 +249,7 @@ footer ul li img {
     -webkit-filter: invert(100%);
 }
 
-footer p{
+footer p {
     font-family: 'Times New Roman', Times, serif;
     font-size: 16px;
     color: #000000;
@@ -253,7 +273,7 @@ footer p{
         'opsz' 24,
 }
 
-footer .material-symbols-outlined{
+footer .material-symbols-outlined {
     transform: scale(1.5);
 }
 
@@ -297,6 +317,7 @@ footer .material-symbols-outlined{
             "redes info cuenta"
             "copyright copyright inicio";
     }
+
     .inicio {
         justify-self: center;
         align-self: center;
@@ -320,17 +341,47 @@ footer .material-symbols-outlined{
             "redes info cuenta"
             "copyright copyright copyright";
     }
-    .linkred{
+
+    .linkred {
         display: none;
     }
-    .inicio{
+
+    .inicio {
         display: none;
     }
-    .copyright{
+
+    .copyright {
         justify-self: center;
-        transform:scale(0.9) ;
+        transform: scale(0.9);
     }
-    .info,.cuenta{
+
+    .info,
+    .cuenta {
         transform: scale(0.8);
+    }
+}
+
+@media screen and (max-width: 320px) {
+    footer {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas:
+            "redes ."
+            "info cuenta"
+            "info cuenta"
+            "copyright copyright";
+    }
+    .redes {
+        justify-self: center;
+        align-self: center;
+        grid-area: redes;
+
+    }
+    footer ul li img {
+        width: 40px;
+        margin-right: 3px;
+    }
+    .redes ul {
+        display: flex;
     }
 }
