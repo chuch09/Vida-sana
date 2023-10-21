@@ -223,6 +223,7 @@ footer ul li img {
     color: #000000;
     font-size: 15px;
     margin-left: 3px;
+    text-wrap: nowrap;
 }
 
 .inicio a {
@@ -276,8 +277,6 @@ footer .material-symbols-outlined{
 
 @media screen and (max-width: 1024px) {
     footer {
-        background-color: #ccefcb;
-        box-shadow: 1px -1px 5px 1px rgba(0, 0, 0, 0.281);
         padding: 30px 60px 15px;
         margin-bottom: 15px;
         display: grid;
@@ -294,8 +293,6 @@ footer .material-symbols-outlined{
 
 @media screen and (max-width: 768px) {
     footer {
-        background-color: #ccefcb;
-        box-shadow: 1px -1px 5px 1px rgba(0, 0, 0, 0.281);
         padding: 30px 20px 15px;
         margin-bottom: 15px;
         display: grid;
@@ -317,8 +314,6 @@ footer .material-symbols-outlined{
 
 @media screen and (max-width: 500px) {
     footer {
-        background-color: #ccefcb;
-        box-shadow: 1px -1px 5px 1px rgba(0, 0, 0, 0.281);
         padding: 30px 10px 15px;
         margin-bottom: 15px;
         display: grid;
@@ -342,5 +337,30 @@ footer .material-symbols-outlined{
     }
     .info,.cuenta{
         transform: scale(0.8);
+    }
+}
+
+@media screen and (max-width: 320px) {
+    footer {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas:
+            "redes ."
+            "info cuenta"
+            "info cuenta"
+            "copyright copyright";
+    }
+    .redes {
+        justify-self: center;
+        align-self: center;
+        grid-area: redes;
+
+    }
+    footer ul li img {
+        width: 40px;
+        margin-right: 3px;
+    }
+    .redes ul {
+        display: flex;
     }
 }
